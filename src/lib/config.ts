@@ -1,10 +1,11 @@
 export type Lang = 'ar' | 'en';
 export const config = {
  name: { ar: 'عليا كلين', en: 'ALIA CLEAN' },
- whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '',
- phone: process.env.NEXT_PUBLIC_PHONE || '', email: process.env.NEXT_PUBLIC_EMAIL || '',
+ whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '966560519723',
+ phone: process.env.NEXT_PUBLIC_PHONE || '+966560519723', email: process.env.NEXT_PUBLIC_EMAIL || '',
  domain: process.env.NEXT_PUBLIC_SITE_URL || '',
  areas: (process.env.NEXT_PUBLIC_SERVICE_AREAS || '').split(',').filter(Boolean),
+ tiktok: process.env.NEXT_PUBLIC_TIKTOK_URL || '', snapchat: process.env.NEXT_PUBLIC_SNAPCHAT_URL || '',
  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || '', map: process.env.NEXT_PUBLIC_MAP_URL || '',
  colors: { primary: '#0B5E57', secondary: '#7CC27C', mint: '#CFEDE8' },
  reviews: [] as { name: string; text: string; verified: boolean }[],

@@ -1,4 +1,4 @@
-﻿# ALIA CLEAN
+# ALIA CLEAN
 
 Bilingual Arabic-first Next.js App Router website, statically exported for Hostinger. No backend or database required.
 
@@ -64,4 +64,14 @@ Company review is required for privacy and terms pages. Complete real contact de
 - `src/lib/config.ts`: centralized company data, service catalog, translated content and WhatsApp utility.
 - `src/app/globals.css`: responsive visual system, RTL/LTR and reduced-motion support.
 
-Fonts are optimized through next/font (Cairo and Inter); the first build needs access to the Google font servers. Photos load from Unsplash and require network access in the browser. To remove that dependency, download approved assets to public/ and update image paths.
+Fonts are optimized through next/font (IBM Plex Sans Arabic and Inter); the first build needs access to the Google font servers. Photos load from Unsplash and require network access in the browser. To remove that dependency, download approved assets to public/ and update image paths.
+
+## Company videos
+The homepage shows company footage from public/. Update the catalog after adding videos with: node scripts/add-company-videos.mjs. Control visibility in src/lib/videos.ts. Videos load on demand and display in groups of six. Local preview: http://localhost:3000/#our-work.
+
+
+Video covers are extracted from the first frame by scripts/add-company-videos.mjs using the development-only ffmpeg-static dependency. Generated JPEGs live in public/video-posters/ and are served using the video poster attribute without preloading the video files. Re-run the script after adding or replacing a video; existing visibility settings are preserved.
+
+
+Company WhatsApp is configured as +966560519723. Service buttons open a service-specific message directly on WhatsApp; /booking/ remains available for detailed requests. Configure NEXT_PUBLIC_TIKTOK_URL and NEXT_PUBLIC_SNAPCHAT_URL with official profile URLs. Until supplied, these platforms are labeled coming soon without linking to an unrelated account. Arabic typography uses self-hosted IBM Plex Sans Arabic via next/font; body copy and controls have larger sizes for laptop readability.
+
